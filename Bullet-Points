@@ -18,3 +18,41 @@ var myObj = {
 
 New Properties can be added to object directly.
 Objects can have methods.
+
+dot and square bracket operator:
+
+There are two ways to access the property of an object:
+1) Dot operator
+2) Sqaure Bracket Operator
+
+In general, Dot operator is used to access the property of any object. But, there are situations where you can't use a Dot Operator and then you have to use the Square Bracket Operator:
+Use the [] notation when property name,
+1) is a reserved keyword/invalid identifier.
+2) starts with a number.
+3) is Dynamic.
+Note: Runtime Engine may not be able to optimize the [] notation.
+
+Dot and [] notation can be interchanged.
+
+We can use a mix and match combination of dot and bracket for Nested Objects.
+
+Two objects are equal iff they are pointing to the same memory location.
+Equality is checked with === operator.
+
+Undefined vs. Null
+
+Undefined: Not initializing with a value.
+For example:
+var greeting;
+
+Null: Initializing with a Non value.
+For example:
+var greeting = null;
+
+Note: If a property or variable is required to hold an empty value only, explicitly initialize with a null.
+
+To remove a property from an Object use the delete keyword.
+for Example:
+delete person.age // this will remove the age property of the person object.
+
+
