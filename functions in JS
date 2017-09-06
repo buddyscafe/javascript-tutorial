@@ -7,8 +7,91 @@ function sayHello(name,age) {
  console.log("Hello "+ name);
 }
 
-Flexible Argument count:
+Flexible Argument count: A feature of JavaScript function is that the argument count doesn't have to match the function signature.
 For example:
 sayHello("Anand"); //Method is defined with two arguments, but it will run even if you supply only one argument considering second one as undefined.
 sayHello("Anand",29,"Extra Argument"); //In this case, it will run even ignoring the Extra argument.
 
+
+To return values to the caller from a function use 'return' keyword. 
+for example:
+function sayHello(name,age) {
+ return "Hello "+ name + "your age is "+age;
+}
+
+Note: If you don't return anything, it will return undefined.
+for example:
+function sayHello(name,age) {
+ return;
+} //OR
+function sayHello(name,age) {
+ console.log("Hello "+ name);
+}
+
+Both the above functions return 'undefined'.
+
+function Expression:
+Functions in JS are first class values, i.e., a function itself is a value in javascript. this is different then returning values from a function.
+For example:
+var f = function sayHello(name,age) {
+ console.log("Hello "+ name);
+};
+f("Anand"); //When you run this, JS will recognize that f is executed as a function and hence will check the value of f and will execute the function.
+
+Anonymous Expression functions:
+Defining functions without any name in the function expressions, makes them anonymous functions.
+For Example:
+var f = function (name,age) {
+ console.log("Hello "+ name);
+};
+f();
+f=1;
+f(); //This line will give error as, f is no more a function variable. //Drawback of using anonymous functions.
+
+
+function as Arguments:
+A function can be passed to another function.
+For example:
+var f = function sayHello(name) {
+ console.log("Hello "+name);
+};
+var executor = function(fn) {
+ console.log(fn); // this line will print "function f()"
+ fn(); // this line will execute the f()
+}
+executor(f);
+
+ To create 'object methods' you need to create functions as object properties:
+ for example:
+ var myObj = {
+ "prop":"Hello"
+ };
+ // this way you can create 'object methods'
+ myObj.myMethod = function() {   
+ console.log("Method in Object");
+ };
+ myObj.myMethod();
+ 
+ 
+ To access the 'self' reference on the object use the 'this' keyword.
+ 
+for example:
+var person = {
+ "firstName":"anand",
+ "lastName":"jain",
+ "getFullName": function() {
+  return this.firstName +" "+this.lastName;
+ }
+ };
+ var fullName = person.getFullName();
+ console.log(fullName);
+ 
+ var person2 = person;
+ person = {};
+ 
+ console.log(person2.getFullName());
+ 
+ 
+ 
+ 
+ 
