@@ -2,5 +2,19 @@ Javascript
 
 Objects in js are free formed, i.e., You don't need to have a class to create an object.
 Objects in js are created independently.
+for example:
+var myObj = {}; //This will create an empty object, holding no properties or behaviour.
+
 Objects in js works like a Map in java.
-As there is no concept of Classes in js, it's not structured and hence, all the properties of an object are accessible from anywhere.
+As there is no concept of Classes in js, it's not structured and hence, all the properties of any object are publicly accessible.
+In js, accessing a property of any obejct, which does not exist, will return undefined. while If we do the same in java or any class based OOP language will give a compile time error.
+
+Object Literal Notation, To create an object with properties upfront, below is the Syntax.
+
+var myObj = {
+"prop1": "Hello",
+"prop2": 123
+};
+
+New Properties can be added to object directly.
+Objects can have methods.
