@@ -1,0 +1,6 @@
+Javascript
+
+Objects in js are free formed, i.e., You don't need to have a class to create an object.
+Objects in js are created independently.
+Objects in js works like a Map in java.
+As there is no concept of Classes in js, it's not structured and hence, all the properties of an object are accessible from anywhere.
