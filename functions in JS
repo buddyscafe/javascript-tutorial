@@ -1,0 +1,14 @@
+functions in JS are same as any other OOP language like java, except the below points:
+
+To create a function use the 'function' keyword.
+Function Arguements are not type bounded not even 'var'
+for example:
+function sayHello(name,age) {
+ console.log("Hello "+ name);
+}
+
+Flexible Argument count:
+For example:
+sayHello("Anand"); //Method is defined with two arguments, but it will run even if you supply only one argument considering second one as undefined.
+sayHello("Anand",29,"Extra Argument"); //In this case, it will run even ignoring the Extra argument.
+
