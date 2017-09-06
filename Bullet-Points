@@ -55,4 +55,33 @@ To remove a property from an Object use the delete keyword.
 for Example:
 delete person.age // this will remove the age property of the person object.
 
+Arrays in js:
+
+Arrays in js are javascript objects.
+indexing starts with 0.
+a length property is associated with each Array object.
+elements in Array are accessed with [] operator.
+length function does not count the no of elements in the array instead it checks the last numeric index and increment it with 1 and return it.
+Non numeric index can also be passed to the array object, but should never be passed.
+
+Note: to make an Array work like an Array , always use numeric indexes and use a series of numbers instead of random numbers to keep track of the number of records present in the Array.
+
+To add an element to an Array use below sytax:
+myArray[5]= "I am the sixth one";
+
+to get the length of an Array:
+myArray.length
+
+Wrapper Objects:
+
+In js, four primitive type (string, number, boolean, symbol(version 6)) is associated with a corresponding Wrapper Object.
+
+for example:
+var greeting = "Hello, good Morning !";
+greeting.length;
+
+When calling length on the string primitive type, js takes that string and creates a temporary wrapper object with a length property associated with it, and returns the length of the value and discards the object.
+
+
+
 
